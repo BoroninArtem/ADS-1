@@ -19,16 +19,16 @@ bool checkPrime(uint64_t value) {
 }
 
 uint64_t nPrime(uint64_t n) {
-	vector <int> arr;
+	std::vector <int> arr;
 	for (int i = 2; i < 1000; ++i) {
 		if (checkPrime(i))
 			arr.push_back(i);
 	}
-	return arr[n-1];
+	return arr[n - 1];
 }
 
 uint64_t nextPrime(uint64_t value) {
-	for (int i =1; i < 1000; ++i) {
+	for (int i = 1; i < 1000; ++i) {
 		if (value == nPrime(i))
 			return(nPrime(i + 1));
 	}
@@ -36,9 +36,8 @@ uint64_t nextPrime(uint64_t value) {
 
 uint64_t sumPrime(uint64_t hbound) {
 	uint64_t sum = 0;
-	for (int i = 1; i < hbound;++i) {
+	for (int i = 1; i < hbound; ++i) {
 		if (hbound > nPrime(i)) {
-			cout << nPrime(i) << endl;
 			sum += nPrime(i);
 		}
 	}
