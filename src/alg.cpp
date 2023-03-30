@@ -51,7 +51,6 @@ uint64_t nextPrime(uint64_t value) {
             return chislo;
     }
 }
-
 uint64_t sumPrime(uint64_t hbound) {
 // вставьте код функции
     uint64_t sum = 0;
